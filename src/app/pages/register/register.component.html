@@ -1,0 +1,25 @@
+<p-card class="card">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">    
+    <div class="main-div">
+        <h1> Register </h1>
+    </div>
+    <div class="input">
+        <label>Name</label>
+        <input type="text" name="" placeholder="Name" formControlName="name" pInputText>
+        <small>enter your name</small>
+    </div>
+    <div class="input">
+        <label>Email</label>
+        <input type="email" name="" placeholder="Email" formControlName="email" pInputText>
+        <small>enter your e-mail</small>
+    </div>
+    <div class="input">
+        <label>Password</label>
+        <input type="password" name="" placeholder="Password" formControlName="password" pInputText>
+        <small>enter your password</small>
+    </div>
+    <div class="input">
+        <p-button type="Submit" [disabled]="form.invalid">Login</p-button>
+    </div>
+</form>
+</p-card>

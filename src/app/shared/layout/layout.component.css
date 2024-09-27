@@ -1,0 +1,12 @@
+
+
+.main-div{
+    display:flex;
+    flex-direction: row;
+    align-items: space-between;
+    justify-content: center;
+}
+
+.icons{
+    padding:1em;
+}
