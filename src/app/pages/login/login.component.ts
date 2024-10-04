@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
+import { AuthService } from '../../core/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -18,6 +19,7 @@ import { ButtonModule } from 'primeng/button';
 })
 export class LoginComponent {
   form:FormGroup;
+  authService= Inject(AuthService)
 
   constructor(private fb: FormBuilder) {
     this.form= this.fb.group({
@@ -30,6 +32,11 @@ export class LoginComponent {
   onSubmit(){
     if(this.form.valid){
       console.log(this.form.value);
+      this.authService.login(this.form.value).subscribe({
+        next:(response: any) => {
+          console.log(response);
+        }
+      })
     }
   }
 
