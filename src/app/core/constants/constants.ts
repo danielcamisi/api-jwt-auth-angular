@@ -1,4 +1,4 @@
-const apiUrl = "http://localhost:3000/api";
+const apiUrl = "http://localhost:4402/api";
 
 export const ApiEndpoint = {
 
@@ -10,6 +10,6 @@ export const ApiEndpoint = {
 
 }
 
-export const localStorage = {
+export const LocalStorage = {
     token: 'USER_TOKEN',
 }

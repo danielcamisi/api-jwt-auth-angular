@@ -5,7 +5,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   {path:'', 
     component: LayoutComponent,
     children:[
